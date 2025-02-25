@@ -8,25 +8,25 @@ library(ggplot2)
 
 ggplot(frequent_terms, aes(x = WORD, y = FREQ)) +
   geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "S這wo", y = "Cz瘰to") +
+  labs(x = "Slowo", y = "Czestosc") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  ggtitle("Wykres cz瘰toi s堯w")
+  ggtitle("Wykres czestosci slow")
 
 ggplot(frequent_terms, aes(y = WORD, x = FREQ)) +
   geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "S這wo", y = "Cz瘰to") +
+  labs(x = "Slowo", y = "Czetosc") +
   theme(axis.text.x = element_text(angle = 0, hjust = 1)) +
-  ggtitle("Wykres cz瘰toi s堯w")
+  ggtitle("Wykres czetosci slow")
 
 ggplot(frequent_terms, aes(x = FREQ, y = reorder(WORD, FREQ))) +
   geom_bar(stat = "identity", fill = "skyblue", color = "darkblue", alpha = 0.8) +
-  labs(x = "Cz瘰to", y = "S這wo") +
-  ggtitle("Wykres cz瘰toi s堯w") +
+  labs(x = "Czetosc", y = "Slowo") +
+  ggtitle("Wykres czetosci slow") +
   theme_minimal() +
   theme(axis.text.y = element_text(size = 10), # Dostosowanie rozmiaru czcionki etykiet na osi Y
-        plot.title = element_text(hjust = 0.5, size = 16, face = "bold"), # Wyodkowanie i stylizacja tytu逝 wykresu
-        panel.grid.major.y = element_blank(), # Usuni璚ie g堯wnych linii siatki poziomej
-        panel.grid.minor.y = element_blank(), # Usuni璚ie mniejszych linii siatki poziomej
+        plot.title = element_text(hjust = 0.5, size = 16, face = "bold"), # Wysrodkowanie i stylizacja tytulu wykresu
+        panel.grid.major.y = element_blank(), # Usuniecie glownych linii siatki poziomej
+        panel.grid.minor.y = element_blank(), # Usuniecie mniejszych linii siatki poziomej
         axis.line = element_line(color = "black")) # Dostosowanie linii osi
 
 Top25Words
