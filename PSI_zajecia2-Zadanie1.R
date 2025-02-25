@@ -1,3 +1,4 @@
+text <- "And so even though we face the difficulties of today and tomorrow, I still have a dream."
 text
 library(qdap)
 freq_terms(text)
@@ -7,25 +8,25 @@ library(ggplot2)
 
 ggplot(frequent_terms, aes(x = WORD, y = FREQ)) +
   geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "S³owo", y = "Czêstoœæ") +
+  labs(x = "Sé€™wo", y = "Czç˜°toî°«") +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  ggtitle("Wykres czêstoœci s³ów")
+  ggtitle("Wykres czç˜°toî¯Ši så ¯w")
 
 ggplot(frequent_terms, aes(y = WORD, x = FREQ)) +
   geom_bar(stat = "identity", fill = "skyblue") +
-  labs(x = "S³owo", y = "Czêstoœæ") +
+  labs(x = "Sé€™wo", y = "Czç˜°toî°«") +
   theme(axis.text.x = element_text(angle = 0, hjust = 1)) +
-  ggtitle("Wykres czêstoœci s³ów")
+  ggtitle("Wykres czç˜°toî¯Ši så ¯w")
 
 ggplot(frequent_terms, aes(x = FREQ, y = reorder(WORD, FREQ))) +
   geom_bar(stat = "identity", fill = "skyblue", color = "darkblue", alpha = 0.8) +
-  labs(x = "Czêstoœæ", y = "S³owo") +
-  ggtitle("Wykres czêstoœci s³ów") +
+  labs(x = "Czç˜°toî°«", y = "Sé€™wo") +
+  ggtitle("Wykres czç˜°toî¯Ši så ¯w") +
   theme_minimal() +
   theme(axis.text.y = element_text(size = 10), # Dostosowanie rozmiaru czcionki etykiet na osi Y
-        plot.title = element_text(hjust = 0.5, size = 16, face = "bold"), # Wyœrodkowanie i stylizacja tytu³u wykresu
-        panel.grid.major.y = element_blank(), # Usuniêcie g³ównych linii siatki poziomej
-        panel.grid.minor.y = element_blank(), # Usuniêcie mniejszych linii siatki poziomej
+        plot.title = element_text(hjust = 0.5, size = 16, face = "bold"), # Wyî¯™odkowanie i stylizacja tytué€ wykresu
+        panel.grid.major.y = element_blank(), # Usuniç’šie gå ¯wnych linii siatki poziomej
+        panel.grid.minor.y = element_blank(), # Usuniç’šie mniejszych linii siatki poziomej
         axis.line = element_line(color = "black")) # Dostosowanie linii osi
 
 Top25Words
