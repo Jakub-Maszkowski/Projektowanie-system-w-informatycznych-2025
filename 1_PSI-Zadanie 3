@@ -1,6 +1,0 @@
-# 3. Stwórz funkcję o nazwie pole_kola, która oblicza pole powierzchni koła dla danego promienia.
-
-pole_kola = function(r){
-pole=2*pi*r
-return(pole)
-}
